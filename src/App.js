@@ -1,18 +1,8 @@
 import React from 'react';
 
 import './App.css';
-const IdCard = ({ lastName, firstName, gender, height, birth, picture }) => {
-  return (
-    <div>
-      <img src={picture} alt="identity" />
-      <strong>First name:{firstName}</strong>
-      <strong>Last name:{lastName}</strong>
-      <strong>Gender:{gender}</strong>
-      <strong>Height:{height}</strong>
-      <strong>Birth:{birth}</strong>
-    </div>
-  );
-};
+import IdCard from './components/idcard.js';
+import Greetings from './components/greetings.js';
 
 function App() {
   return (
@@ -33,6 +23,8 @@ function App() {
         birth={new Date('1988-05-11')}
         picture="https://randomuser.me/api/portraits/women/44.jpg"
       />
+      <Greetings lang="de">Ludwig</Greetings>
+      <Greetings lang="fr">François</Greetings>
     </div>
   );
 }
