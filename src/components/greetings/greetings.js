@@ -1,4 +1,5 @@
 import React from 'react';
+import './greetings.css';
 
 const Greetings = ({lang, children}) => {
     let greeting = '';
@@ -27,7 +28,7 @@ const Greetings = ({lang, children}) => {
    
 
     return (
-        <div>
+        <div className="Greetings">
             {greeting} {children}
         </div>   
     )
